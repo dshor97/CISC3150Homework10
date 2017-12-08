@@ -1,3 +1,5 @@
+package plugin;
+
 public class plugin2 extends myPlugin{
     public void whoSaysHello(){
         System.out.println("plugin2 says hello.");
