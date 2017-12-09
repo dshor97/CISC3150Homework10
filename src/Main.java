@@ -1,7 +1,7 @@
+import javax.tools.JavaCompiler;
+import javax.tools.ToolProvider;
 import java.io.*;
 import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.Scanner;
 
 public class Main{
@@ -34,11 +34,15 @@ public class Main{
             classStuff += l;
         }
 
+
         BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/Student/IdeaProjects/CISC3150Homework10/src/myPlugin.java"));
         bw.write(classStuff,0,classStuff.length());
         bw.flush();
 
-        System.out.println(classStuff);
+        JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+        compiler.run(null, null, null, new File("/Users/Student/IdeaProjects/CISC3150Homework10/src/myPlugin.java").getAbsolutePath());
+
+        //System.out.println(classStuff);
 
 
         Class cls = Class.forName(files[numPick-1].getName().replaceFirst(".java",""));
