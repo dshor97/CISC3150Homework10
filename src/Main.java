@@ -18,7 +18,7 @@ public class Main{
         Scanner input = new Scanner(System.in);
         System.out.println("Which plug in would you like to use:");
         for(int i = 0;i < files.length;i++){
-            System.out.println("Press " + (i+1) + " for " + files[i]);
+            System.out.println("Press " + (i+1) + " for " + files[i].getName().replaceFirst(".java",""));
         }
         int numPick = input.nextInt();
         if(numPick > files.length || numPick <= 0){
