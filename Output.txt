@@ -1,6 +1,5 @@
-Press 1 for /Users/Student/IdeaProjects/CISC3150Homework10/plugin/plugin1.java
-Press 2 for /Users/Student/IdeaProjects/CISC3150Homework10/plugin/plugin2.java
+Press 1 for plugin1
+Press 2 for plugin2
 1
-class plugin1
 plugin1 says hello.
 plugin1 says bye.

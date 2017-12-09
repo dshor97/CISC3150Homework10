@@ -46,7 +46,6 @@ public class Main{
 
 
         Class cls = Class.forName(files[numPick-1].getName().replaceFirst(".java",""));
-        System.out.println(cls);
         Object obj =  cls.newInstance();
         Method mtdHi = cls.getMethod("whoSaysHello");
         Method mtdBye = cls.getMethod("whoSaysBye");
